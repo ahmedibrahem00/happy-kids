@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- لينك Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>قسم المرح</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcbbed;
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+        header {
+            background-color: #ff85e2;
+            padding: 20px;
+            color: white;
+        }
+        main {
+            padding: 20px;
+        }
+        img {
+            max-width: 40%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        video {
+            max-width: 40%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>قسم المرح</h1>
+        <nav>
+            <a href="index.html" class="btn btn-outline-light px-4 py-2 rounded-pill">
+              الصفحة الرئيسية
+            </a>
+          </nav>                    
+    </header>
+    <main>        
+        <h2>فيديوهات مرحة</h2>
+        <video controls>
+            <source src="fun/vid1.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid2.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid3.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid4.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid5.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid6.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid7.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid8.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid9.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid10.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid11.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid12.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid13.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid14.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid15.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid16.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid17.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid18.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid19.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+        <video controls>
+            <source src="fun/vid20.mp4" type="video/mp4">
+            المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+    </main>
+    <script>
+        // دالة لعرض صور وفيديوهات المرح
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("showContent");
+    const contentDiv = document.getElementById("content");
+
+    button.addEventListener("click", () => {
+        const elements = contentDiv.querySelectorAll("img, video");
+
+        elements.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.display = "block";
+            }, index * 500);
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // كل الفيديوهات
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        video.addEventListener("play", () => {
+            // أول ما فيديو يشتغل
+            videos.forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.pause(); // قفل الباقي
+                }
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>

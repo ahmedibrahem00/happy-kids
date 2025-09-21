@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الأطفال السعيد</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* إعدادات أساسية */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        text-align: center;
+    }
+    
+    /* رأس الصفحة */
+    header {
+        background-color: #feabaa;
+        color: #fff;
+        padding: 20px;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2em;
+    }
+    
+    /* الأقسام */
+    main section {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    main section h2 {
+        font-size: 2em;
+        color: #ff5733;
+    }
+    
+    main section p {
+        font-size: 1.2em;
+        color: #555;
+    }
+    
+    main section button {
+        background-color: #ff5733;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    main section button:hover {
+        background-color: #ff3311;
+    }
+    
+    /* الفوتر */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+<body>
+    <header>
+        <h1>عالم الأطفال السعيد</h1>
+        <nav>
+            <ul>
+                <li><a href="#entertainment">الترفيه</a></li>
+                <li><a href="#religion">التعليم الديني</a></li>
+                <li><a href="#fun">المرح</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="entertainment">
+            <h2>قسم الترفيه</h2>
+            <p>استمتع بمجموعة من الألعاب والفيديوهات الممتعة.</p>
+            <a href="entertainment.html"><button>اكتشف الآن</button></a>
+        </section>
+
+        <section id="religion">
+            <h2>قسم التعليم الديني</h2>
+            <p>تعلم أساسيات الدين الإسلامي من خلال الفيديوهات والصور.</p>
+            <a href="religion.html"><button>تعلم المزيد</button></a>
+        </section>
+
+        <section id="fun">
+            <h2>قسم المرح</h2>
+            <p>استمتع بالألعاب التفاعلية والألغاز الممتعة.</p>
+            <a href="fun.html"><button>أبدأ اللعب</button></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 عالم الأطفال السعيد - جميع الحقوق محفوظة - أحمد إبراهيم.</p>
+    </footer>
+
+    <script>
+        // رسالة ترحيب عند الضغط على الأزرار
+    document.querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => {
+            const sectionName = button.parentElement.querySelector("h2").textContent;
+        });
+    });
+    
+    // التمرير السلس عند الضغط على الروابط
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault(); // منع السلوك الافتراضي
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+    });
+    
+    // ألوان عشوائية عند المرور بالماوس على الأقسام
+    const sections = document.querySelectorAll("main section");
+    sections.forEach(section => {
+        section.addEventListener("mouseover", () => {
+            section.style.backgroundColor = getRandomColor();
+        });
+        section.addEventListener("mouseout", () => {
+            section.style.backgroundColor = "#fff"; // يرجع اللون الأبيض
+        });
+    });
+    
+    // دالة للحصول على لون عشوائي
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    </script>
+</body>
+</html>
